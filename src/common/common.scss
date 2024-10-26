@@ -1,0 +1,14 @@
+@use 'color';
+@use 'fonts';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: Ubuntu, Helvetica, sans-serif;
+}

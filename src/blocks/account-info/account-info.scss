@@ -1,0 +1,39 @@
+.account-info {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+
+  @media (min-width: 480px) {
+    gap: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 606px auto;
+  }
+
+  .balance-chart {
+    @media (min-width: 768px) {
+      max-width: 668px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: none;
+    }
+
+    &--wide {
+      @media (min-width: 768px) {
+        max-width: none;
+      }
+      @media (min-width: 1200px) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  .money-transfer-history {
+    @media (min-width: 1200px) {
+      grid-column: 1 / span 2;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.login-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  background-color: var(--clr-gray-7);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 480px) {
+    padding: 30px 30px 30px 95px;
+    align-items: flex-start;
+    border-radius: 30px;
+    gap: 20px;
+  }
+
+  @media (min-width: 576px) {
+    padding: 50px 85px 50px 115px;
+    border-radius: 50px;
+    gap: 30px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'Work Sans', Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+
+    @media (min-width: 480px) {
+      font-size: 28px;
+    }
+
+    @media (min-width: 576px) {
+      font-size: 34px;
+    }
+  }
+
+  &__label {
+    align-self: stretch;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.25;
+
+      @media (min-width: 480px) {
+        position: absolute;
+        right: calc(100% + 9px);
+      }
+
+      &--invalid {
+        position: absolute;
+        top: 100%;
+        left: 17px;
+        font-size: 10px;
+        line-height: 1.5;
+        color: var(--clr-secondary-4);
+
+        @media (min-width: 576px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid var(--clr-gray-5);
+    border-radius: 7px;
+
+    &:hover {
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary-lightest);
+    }
+
+    &:focus-visible {
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary-lightest);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--clr-gray-4);
+    }
+
+    &--invalid,
+    &--invalid:hover,
+    &--invalid:focus-visible {
+      border-color: var(--clr-secondary-4);
+    }
+  }
+}

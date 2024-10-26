@@ -1,0 +1,176 @@
+.money-transfer-form {
+  width: 100%;
+  padding: 25px;
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--clr-gray-7);
+  border-radius: 25px;
+
+  @media (min-width: 480px) {
+    padding: 25px 30px;
+    justify-items: start;
+    border-radius: 30px;
+  }
+
+  @media (min-width: 576px) {
+    padding: 25px 50px;
+    border-radius: 50px;
+    gap: 25px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 668px;
+    grid-template-columns: auto 342px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 606px;
+    grid-template-columns: auto 290px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: 'Work Sans', Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+
+    @media (min-width: 768px) {
+      grid-column: span 2;
+    }
+  }
+
+  &__label {
+    position: relative;
+    width: 100%;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    @media (min-width: 768px) {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: auto 342px;
+      align-items: center;
+      gap: 25px;
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: auto 289px;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.25;
+
+      @media (min-width: 768px) {
+        justify-self: end;
+        text-align: end;
+      }
+
+      &--invalid {
+        position: absolute;
+        top: 100%;
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--clr-secondary-4);
+
+        @media (min-width: 768px) {
+          left: 243px;
+        }
+
+        @media (min-width: 1200px) {
+          left: 234px;
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    border: 1px solid var(--clr-gray-5);
+    border-radius: 7px;
+    transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out;
+
+    @media (min-width: 480px) {
+      font-size: 16px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 289px;
+    }
+
+    &:hover {
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary-lightest);
+    }
+
+    &:focus-visible {
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary-lightest);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--clr-gray-4);
+    }
+
+    &--invalid,
+    &--invalid:hover,
+    &--invalid:focus-visible {
+      border-color: var(--clr-secondary-4);
+    }
+  }
+
+  .button {
+    @media (min-width: 768px) {
+      grid-column: 2;
+    }
+  }
+
+  .autocomplete-list {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-color: var(--clr-white);
+    border-radius: 7px;
+    list-style: none;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+
+    @media (min-width: 768px) {
+      left: 226px;
+    }
+
+    @media (min-width: 1200px) {
+      left: 217px;
+    }
+
+    &__item {
+      padding: 10px 16px;
+      border-radius: 7px;
+      font-size: 12px;
+      line-height: 1.5;
+      cursor: pointer;
+
+      @media (min-width: 480px) {
+        font-size: 16px;
+      }
+
+      &:hover,
+      &--active {
+        background-color: var(--clr-gray-7);
+      }
+    }
+  }
+}

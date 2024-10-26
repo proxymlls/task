@@ -1,0 +1,15 @@
+.menu {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+      gap: 25px;
+    }
+  }
+}
